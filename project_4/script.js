@@ -32,3 +32,24 @@ function generatePassword(){
     
 }
 
+function copyPassword() {
+    if (!passwordBox.value) {
+        alert("no password generated yet");
+        return;
+    }
+
+    
+      // Focus on the input box to make sure it's active and ready for selection
+    passwordBox.focus();
+       // Select the text in the input box
+    passwordBox.select();
+    //If the Clipboard API is available, it tries to copy the text from the password input box to the clipboard.
+    if (navigator.clipboard) {
+        navigator.clipboard.writeText(passwordBox.value)
+        .then( () => console.log("password copied"))
+        .catch(err => {
+        console.error('Failed to copy text: ', err);
+        alert("Failed to copy password");
+        });
+    }
+}

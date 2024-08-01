@@ -56,3 +56,8 @@ button:hover {
     right:30px;
     cursor:pointer;
 }
+
+input[type="text"]::selection {
+    background: #00bfff; /* Light blue background for selected text */
+    color: #000; /* Optional: black text color for better contrast */
+}
