@@ -31,3 +31,8 @@ async function generateQuote() {
 }
 
 generateQuote()
+
+// to post the tweet
+function tweet() {
+    window.open(`https://twitter.com/intent/tweet?text=${quoteText.textContent} + ${authorName.textContent}`);
+}
