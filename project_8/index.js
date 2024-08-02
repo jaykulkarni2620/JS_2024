@@ -6,10 +6,13 @@ function createQrCode() {
     // Clear previous QR code
     displayQr.innerHTML = ""; 
 
-    // call the QRcode method pass the "displayQr Div" 
-    const qrcode = new QRCode(displayQr, {
+    if (inputField.value.length > 0) {
+        // call the QRcode method pass the "displayQr Div" 
+        const qrcode = new QRCode(displayQr, {
         text: inputField.value,
         width: 150,
         height: 150
     });
+    }
+  
 }
