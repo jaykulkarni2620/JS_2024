@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> QR Generate App</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h4>Enter your text or url</h4>
+        <input id="inputField" type="text" placeholder="Enter something...">
+        <div id="qrcode">
+
+        </div>
+        <button onclick="createQrCode()">Generate QR code</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
